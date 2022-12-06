@@ -1,0 +1,241 @@
+body {
+  margin: auto;
+  font-family: system-ui, Helvetica, Arial,sans-serif;
+  overflow: auto;
+  background: linear-gradient(315deg, #130f40 3%, rgb(44, 93, 141) 38%, rgb(26, 88, 213) 68%, rgb(73, 50, 191) 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(1);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(1);
+  }
+}
+
+
+.wrap {
+    width:90%;
+    margin:0 auto;
+  }
+
+header{
+    width: 100%;
+    height: 100px;
+    background: #002D62;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .logo {
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+  }
+
+  /*Import fonts */
+  .logo h2{
+    font-size: 30px;
+    font-family: 'Pacifico';
+    color: #fff;
+    letter-spacing: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    margin-left: 30px;
+
+    /* Animation specifications */
+    animation:
+    effect 3.5s steps(50, end),
+    .75s step-end infinite;
+  }
+
+  .logo a {
+    text-decoration: none;
+  }
+
+  /* Animation effect css */
+  @keyframes effect {
+    from {
+      width: 0
+    }
+    to {
+      width: 100%
+    }
+  }
+
+  nav {
+    float: right;
+    line-height: 100px;
+    margin: 0px 0px 0px 411px;
+  }
+
+  nav a{
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: #fff;
+    padding: 36px 10px;
+    margin: 0 1px;
+  }
+
+  nav a:hover{
+    background: #fff;
+    color: #130f40
+  }
+
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    margin-top: 175px;
+  }
+
+  .contact-box {
+    background: white;
+    display: flex;
+  }
+
+  .contact-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+  }
+
+  .contact-right {
+    flex-basis: 40%;
+    padding: 40px;
+    background: #002D62;
+    color: white;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .contatiner p {
+    margin-bottom: 40px
+  }
+
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .input-row .input-group {
+    flex-basis: 45%;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+  }
+
+  textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  label {
+    margin-bottom: 6px;
+    display: block;
+    color: #002D62;
+  }
+
+  button {
+    background: #002D62;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: white;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+  }
+
+  .contact-left h3 {
+    color: #002D62;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .contact-right h3 {
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  tr td:first-child{
+    padding-right: 20px;
+  }
+
+  tr td{
+    padding-top: 20px;
+  }
+
+  .container h1 {
+    color: white;
+  }

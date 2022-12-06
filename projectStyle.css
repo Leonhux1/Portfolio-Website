@@ -1,0 +1,477 @@
+/* Styles for the website */
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  margin: auto;
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+  overflow: auto;
+  background: linear-gradient(315deg, #130f40 3%, rgb(44, 93, 141) 38%, rgb(26, 88, 213) 68%, rgb(73, 50, 191) 98%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+      transform: translateX(1);
+  }
+
+  25% {
+      transform: translateX(-25%);
+  }
+
+  50% {
+      transform: translateX(-50%);
+  }
+
+  75% {
+      transform: translateX(-25%);
+  }
+
+  100% {
+      transform: translateX(1);
+  }
+}
+.wrap {
+  width:90%;
+  margin:0 auto;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  background: #002D62;
+  position: fixed;
+  z-index: 2;
+}
+
+.logo {
+  width: 30%;
+  float: left;
+  text-align: left;
+  line-height: 100px;
+}
+
+/*Import fonts */
+.logo h2{
+  font-size: 30px;
+  font-family: 'Pacifico';;
+  color: #fff;
+  letter-spacing: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  margin-left: 30px;
+
+  /* Animation specifications */
+  animation:
+  effect 3.5s steps(50, end),
+  .75s step-end infinite;
+}
+
+.logo a {
+  text-decoration: none;
+}
+/* Animation effect css */
+@keyframes effect {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+
+nav {
+  float: right;
+  line-height: 100px;
+  margin: 0px 0px 0px 411px;
+}
+
+nav a{
+  text-decoration: none;
+  letter-spacing: 4px;
+  font-size: 20px;
+  color: #fff;
+  padding: 36px 10px;
+  margin: 0 1px;
+}
+
+nav a:hover{
+  background: #fff;
+  color: #130f40
+}
+
+.banner {
+  background-size: cover;
+  background-position: center center;
+  top: 100px;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  color: white;
+  font-size: 50px
+}
+
+.banner:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.banner h2 {
+  margin-top: 230px;
+}
+
+.content-area {
+  width: 100%;
+  height: 800px;
+  position: relative;
+
+  top: 1000px;
+}
+
+.Heading {
+  text-align: center;
+}
+
+/* Styles for the cards */
+.card-java {
+  display: flex;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text";
+  width: 299.5px;
+
+
+  font-family: roboto;
+  border-radius: 19px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-image-java {
+  grid-area: image;
+  justify-content: center;
+  background: url("java.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  width: 165px;
+  margin: 0px 0px 0px 65px;
+  background-size: cover;
+}
+
+.card-text-java a {
+  text-decoration: none;
+  border-radius: 100%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-text-java .javatext {
+  color: black;
+  font-size: 25px;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.card-text-java .javatitle {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+}
+
+.card-text-java {
+  grid-area: text;
+  margin: 25px;
+}
+
+.colored-area-java {
+    background: #4B0082;
+    height: 290px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;;
+}
+
+.card-java:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-text-java a:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* C++ */
+.card-cpp {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text";
+  width: 299.5px;
+
+  font-family: roboto;
+  border-radius: 19px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-image-cpp {
+  grid-area: image;
+  justify-content: center;
+  background: url("cpp.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  margin: 0px 0px 0px 0px;
+  background-size: cover;
+}
+
+.card-text-cpp a {
+  text-decoration: none;
+  border-radius: 100%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-text-cpp .cpptext {
+  color: black;
+  font-size: 25px;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.card-text-cpp .cpptitle {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+}
+
+.card-text-cpp {
+  grid-area: text;
+  margin: 25px;
+}
+
+.colored-area-cpp {
+    background: #568203;
+    height: 290px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;;
+}
+
+.card-cpp:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-text-cpp a:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Python */
+.card-py {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text";
+  width: 299.5px;
+
+  font-family: roboto;
+  border-radius: 19px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+
+}
+
+.card-image-py {
+  grid-area: image;
+  justify-content: center;
+  background: url("python.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  margin: 0px 0px 0px 55px;
+  width: 65%;
+  background-size: cover;
+}
+
+.card-text-py a {
+  text-decoration: none;
+  border-radius: 100%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-text-py .pytext {
+  color: black;
+  font-size: 25px;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.card-text-py .pytitle {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+}
+
+.card-text-py {
+  grid-area: text;
+  margin: 25px;
+}
+
+.colored-area-py {
+    background: #FFBF00;
+    height: 290px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;;
+}
+
+.card-py:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-text-py a:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Python */
+.card-sub {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text";
+  width: 299.5px;
+
+  font-family: roboto;
+  border-radius: 19px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-image-sub {
+  grid-area: image;
+  justify-content: center;
+  background: url("javascript.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  margin: 0px 0px 0px -33px;
+  background-size: cover;
+}
+
+.card-text-sub a {
+  text-decoration: none;
+  border-radius: 100%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-text-sub .subtext {
+  color: black;
+  font-size: 25px;
+  font-weight: 300;
+  justify-content: center;
+}
+
+.card-text-sub .subtitle {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+}
+
+.card-text-sub {
+  grid-area: text;
+  margin: 25px;
+}
+
+.colored-area-sub {
+    background: #800000;
+    height: 290px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;;
+}
+
+.card-sub:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-text-sub a:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.wrap {
+  display: flex;
+}
